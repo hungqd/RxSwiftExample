@@ -8,23 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		B5A21E2E2254E23600FD8AE8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A21E2D2254E23600FD8AE8 /* main.swift */; };
+		B5A21E3F2254E5F900FD8AE8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A21E3E2254E5F900FD8AE8 /* RxSwift.framework */; };
+		B5A21E412254E60B00FD8AE8 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5A21E402254E60A00FD8AE8 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B5A21E282254E23600FD8AE8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				B5A21E412254E60B00FD8AE8 /* RxSwift.framework in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B5A21E2A2254E23600FD8AE8 /* RxSwiftExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RxSwiftExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A21E2D2254E23600FD8AE8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B5A21E3E2254E5F900FD8AE8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		B5A21E402254E60A00FD8AE8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A21E3F2254E5F900FD8AE8 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +47,10 @@
 		B5A21E212254E23600FD8AE8 = {
 			isa = PBXGroup;
 			children = (
+				B5A21E402254E60A00FD8AE8 /* RxSwift.framework */,
 				B5A21E2C2254E23600FD8AE8 /* RxSwiftExample */,
 				B5A21E2B2254E23600FD8AE8 /* Products */,
+				B5A21E3D2254E5F900FD8AE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +68,14 @@
 				B5A21E2D2254E23600FD8AE8 /* main.swift */,
 			);
 			path = RxSwiftExample;
+			sourceTree = "<group>";
+		};
+		B5A21E3D2254E5F900FD8AE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5A21E3E2254E5F900FD8AE8 /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +261,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -254,6 +274,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
