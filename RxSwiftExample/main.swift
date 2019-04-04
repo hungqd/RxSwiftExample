@@ -18,6 +18,10 @@ extension CustomError: LocalizedError {
     }
 }
 
+_ = Observable<Int>.just(Int.random(in: 1...100)).subscribe { print($0) }
+
+print("=============================================")
+
 _ = Observable.from(["Dang", "Quang", "Hung"])
     .subscribe(onNext: { (value) in
         print(value)
