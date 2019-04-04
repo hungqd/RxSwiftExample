@@ -9,15 +9,6 @@
 import Foundation
 import RxSwift
 
-class CustomError: Error {
-}
-
-extension CustomError: LocalizedError {
-    var errorDescription: String? {
-        return NSLocalizedString("Custom error", comment: "")
-    }
-}
-
 _ = Observable<Int>.just(Int.random(in: 1...100)).subscribe { print($0) }
 
 print("=============================================")

@@ -10,6 +10,11 @@
 		B5A21E2E2254E23600FD8AE8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A21E2D2254E23600FD8AE8 /* main.swift */; };
 		B5A21E3F2254E5F900FD8AE8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A21E3E2254E5F900FD8AE8 /* RxSwift.framework */; };
 		B5A21E412254E60B00FD8AE8 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5A21E402254E60A00FD8AE8 /* RxSwift.framework */; };
+		B5A67443225637BF001ED7AA /* errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A67442225637BF001ED7AA /* errors.swift */; };
+		B5A67444225637F4001ED7AA /* errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A67442225637BF001ED7AA /* errors.swift */; };
+		B5F71A022256358D005B203A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A21E3E2254E5F900FD8AE8 /* RxSwift.framework */; };
+		B5F71A042256358D005B203A /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5A21E402254E60A00FD8AE8 /* RxSwift.framework */; };
+		B5F71A102256368A005B203A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F71A0E22563673005B203A /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,13 +28,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5F71A032256358D005B203A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				B5F71A042256358D005B203A /* RxSwift.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B5A21E2A2254E23600FD8AE8 /* RxSwiftExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RxSwiftExample; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A21E2A2254E23600FD8AE8 /* Observable */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Observable; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A21E2D2254E23600FD8AE8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B5A21E3E2254E5F900FD8AE8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
 		B5A21E402254E60A00FD8AE8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		B5A67442225637BF001ED7AA /* errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errors.swift; sourceTree = "<group>"; };
+		B5F71A082256358D005B203A /* Single */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Single; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F71A0E22563673005B203A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +56,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5A21E3F2254E5F900FD8AE8 /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5F71A012256358D005B203A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F71A022256358D005B203A /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +83,8 @@
 		B5A21E2B2254E23600FD8AE8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B5A21E2A2254E23600FD8AE8 /* RxSwiftExample */,
+				B5A21E2A2254E23600FD8AE8 /* Observable */,
+				B5F71A082256358D005B203A /* Single */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,7 +92,8 @@
 		B5A21E2C2254E23600FD8AE8 /* RxSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
-				B5A21E2D2254E23600FD8AE8 /* main.swift */,
+				B5A67441225637A0001ED7AA /* Common */,
+				B5F71A11225636B2005B203A /* Observables */,
 			);
 			path = RxSwiftExample;
 			sourceTree = "<group>";
@@ -78,12 +106,45 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B5A67441225637A0001ED7AA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B5A67442225637BF001ED7AA /* errors.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B5F71A0C2256361A005B203A /* Single */ = {
+			isa = PBXGroup;
+			children = (
+				B5F71A0E22563673005B203A /* main.swift */,
+			);
+			path = Single;
+			sourceTree = "<group>";
+		};
+		B5F71A0D22563649005B203A /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				B5A21E2D2254E23600FD8AE8 /* main.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+		B5F71A11225636B2005B203A /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				B5F71A0D22563649005B203A /* Observable */,
+				B5F71A0C2256361A005B203A /* Single */,
+			);
+			path = Observables;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B5A21E292254E23600FD8AE8 /* RxSwiftExample */ = {
+		B5A21E292254E23600FD8AE8 /* Observable */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5A21E312254E23600FD8AE8 /* Build configuration list for PBXNativeTarget "RxSwiftExample" */;
+			buildConfigurationList = B5A21E312254E23600FD8AE8 /* Build configuration list for PBXNativeTarget "Observable" */;
 			buildPhases = (
 				B5A21E262254E23600FD8AE8 /* Sources */,
 				B5A21E272254E23600FD8AE8 /* Frameworks */,
@@ -93,9 +154,26 @@
 			);
 			dependencies = (
 			);
-			name = RxSwiftExample;
+			name = Observable;
 			productName = RxSwiftExample;
-			productReference = B5A21E2A2254E23600FD8AE8 /* RxSwiftExample */;
+			productReference = B5A21E2A2254E23600FD8AE8 /* Observable */;
+			productType = "com.apple.product-type.tool";
+		};
+		B5F719FE2256358D005B203A /* Single */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5F71A052256358D005B203A /* Build configuration list for PBXNativeTarget "Single" */;
+			buildPhases = (
+				B5F719FF2256358D005B203A /* Sources */,
+				B5F71A012256358D005B203A /* Frameworks */,
+				B5F71A032256358D005B203A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Single;
+			productName = RxSwiftExample;
+			productReference = B5F71A082256358D005B203A /* Single */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +203,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B5A21E292254E23600FD8AE8 /* RxSwiftExample */,
+				B5A21E292254E23600FD8AE8 /* Observable */,
+				B5F719FE2256358D005B203A /* Single */,
 			);
 		};
 /* End PBXProject section */
@@ -136,6 +215,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5A21E2E2254E23600FD8AE8 /* main.swift in Sources */,
+				B5A67443225637BF001ED7AA /* errors.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5F719FF2256358D005B203A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A67444225637F4001ED7AA /* errors.swift in Sources */,
+				B5F71A102256368A005B203A /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +372,32 @@
 			};
 			name = Release;
 		};
+		B5F71A062256358D005B203A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B5F71A072256358D005B203A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -295,11 +410,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5A21E312254E23600FD8AE8 /* Build configuration list for PBXNativeTarget "RxSwiftExample" */ = {
+		B5A21E312254E23600FD8AE8 /* Build configuration list for PBXNativeTarget "Observable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5A21E322254E23600FD8AE8 /* Debug */,
 				B5A21E332254E23600FD8AE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5F71A052256358D005B203A /* Build configuration list for PBXNativeTarget "Single" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5F71A062256358D005B203A /* Debug */,
+				B5F71A072256358D005B203A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
